@@ -1,4 +1,3 @@
-cat > Dockerfile << 'EOF'
 FROM python:3.12-slim
 
 WORKDIR /app
@@ -24,8 +23,3 @@ COPY best.pt .
 
 EXPOSE 8000
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-EOF
-
-git add Dockerfile
-git commit -m "fix: force reinstall numpy 1.26.4 after opencv"
-git push
