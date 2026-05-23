@@ -35,9 +35,11 @@ app.add_middleware(
         "http://localhost:5173",   # Vite dev server
         "http://127.0.0.1:3000",
         "http://127.0.0.1:5173",
-        "https://fracturenet-nu.vercel.app"
-        # Add your production domain here:
-        # "https://radiologix.app",
+        "https://fracturenet-nu.vercel.app",
+        # Railway production domain (update this after deployment):
+        # "https://your-app-name.up.railway.app",
+        # Or allow all origins in development (do not use in production):
+        # "*",
     ],
     allow_credentials=True,
     allow_methods=["*"],
